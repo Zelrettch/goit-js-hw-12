@@ -7,9 +7,16 @@ body {
   color: #2e2f42;
 }
 
-.loader-wrapper {
-  height: 30vh;
+.loader-block {
+  height: 116px;
   position: relative;
+}
+
+.loader-block .blue-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .is-hidden {
@@ -97,9 +104,10 @@ body {
   color: #808080;
 }
 
-.search-form button {
+.blue-btn {
   font-size: 16px;
   font-weight: 500;
+  line-height: 24px;
   color: #ffffff;
   padding: 8px 16px;
   border-radius: 8px;
@@ -108,6 +116,6 @@ body {
   transition: background-color ease-in-out 250ms;
 }
 
-.search-form button:hover {
+.blue-btn:hover {
   background-color: #6c8cff;
 }

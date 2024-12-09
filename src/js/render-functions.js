@@ -3,7 +3,8 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-const loader = document.querySelector('.loader-wrapper');
+const loader = document.querySelector('.loader');
+const loadBtn = document.querySelector('.load-btn');
 const gallery = document.querySelector('.gallery');
 
 export function fillGalery(images, gallery) {
@@ -62,17 +63,25 @@ function createFields(data) {
   });
 }
 
-export function displayAlert(message) {
+export function displayAlert(message, color = 'red') {
   iziToast.show({
     transitionIn: 'fadeInDown',
     position: 'topRight',
-    color: 'red',
+    color,
     message,
   });
 }
 
 export function toggleLoader() {
   loader.classList.toggle('is-hidden');
+}
+
+export function showLoadBtn() {
+  loadBtn.classList.remove('is-hidden');
+}
+
+export function hideLoadBtn() {
+  loadBtn.classList.add('is-hidden');
 }
 
 export function clearGallery() {

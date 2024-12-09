@@ -25,10 +25,15 @@
     <main>
       <form class="search-form">
         <input type="text" name="input" placeholder="Search images..." />
-        <button type="submit">Search</button>
+        <button type="submit" class="blue-btn">Search</button>
       </form>
       <ul class="gallery"></ul>
-      <div class="loader-wrapper is-hidden"><span class="loader"></span></div>
+      <div class="loader-block">
+        <span class="loader is-hidden"></span>
+        <button type="button" , class="load-btn blue-btn is-hidden">
+          Load more
+        </button>
+      </div>
     </main>
   </body>
 </html>
