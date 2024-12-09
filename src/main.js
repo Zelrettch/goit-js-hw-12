@@ -83,13 +83,13 @@ async function handleLoadMore(evt) {
     displayAlert(LAST_PAGE_MSG, 'blue');
   }
 
-  const h = gallery.children[lastCard].getBoundingClientRect().top;
-  scrollDown(h);
+  const h = gallery.children[lastCard - 1].getBoundingClientRect().height;
+  scrollDown(h * 2);
 }
 
 function scrollDown(h) {
   window.scrollTo({
-    top: h + window.scrollY - 10,
+    top: h + window.scrollY,
     left: 0,
     behavior: 'smooth',
   });
