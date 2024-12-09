@@ -6,7 +6,7 @@ const API_KEY = '47493519-a1c562378b8b6eff6e1575382';
 // axios.defaults.headers.common['key'] = API_KEY;
 
 export default async function fetchImages(filter, page) {
-  return await axios.get('https://pixabay.com/api', {
+  return await axios.get('https://pixabay.com/api/', {
     params: {
       key: API_KEY,
       q: filter,
@@ -15,7 +15,6 @@ export default async function fetchImages(filter, page) {
       safesearch: 'true',
       page,
       per_page: 15,
-      withCredentials: false,
     },
   });
 }
