@@ -54,14 +54,14 @@ async function loadPage() {
   try {
     const d = await search.fetchPage();
     handleData(d);
+    if (search.hasNext) {
+      showLoadBtn();
+    }
   } catch (e) {
     displayAlert(e.message);
     console.log(e.stack);
   } finally {
     toggleLoader();
-    if (search.hasNext) {
-      showLoadBtn();
-    }
   }
 }
 
